@@ -1,0 +1,10 @@
+<!-- PLACEHOLDER screenshot (9:19.5). Replace with a real PNG/JPG export. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 585" role="img" aria-label="App One screenshot">
+  <rect width="270" height="585" rx="24" fill="#E9E6F7"/>
+  <rect x="20" y="44" width="120" height="14" rx="7" fill="#352B7E"/>
+  <rect x="20" y="70" width="200" height="10" rx="5" fill="#9990C9"/>
+  <circle cx="135" cy="300" r="60" fill="none" stroke="#FFB36B" stroke-width="3"/>
+  <circle cx="135" cy="300" r="22" fill="#FF6A4D"/>
+  <circle cx="195" cy="300" r="8" fill="#352B7E"/>
+  <rect x="40" y="500" width="190" height="44" rx="12" fill="#FF6A4D"/>
+</svg>

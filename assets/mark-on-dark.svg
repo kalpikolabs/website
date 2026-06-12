@@ -1,0 +1,6 @@
+<!-- PLACEHOLDER — replace with brand-kit mark-on-dark.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Kalpiko Labs">
+  <circle cx="16" cy="16" r="4" fill="#FF6A4D"/>
+  <circle cx="16" cy="16" r="9" fill="none" stroke="#FFB36B" stroke-width="1.5"/>
+  <circle cx="25" cy="16" r="1.6" fill="#FFF4E3"/>
+</svg>

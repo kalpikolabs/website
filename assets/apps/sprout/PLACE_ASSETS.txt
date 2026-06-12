@@ -1,0 +1,33 @@
+SPROUT — ASSETS TO DROP IN  (/assets/apps/sprout/)
+====================================================
+These files are referenced by /data/apps.json and the detail page. Until they
+exist the icon and screenshots will 404 (expected while "coming-soon"). Do NOT
+commit placeholder images — drop the real exports here with these exact names.
+
+REQUIRED
+--------
+icon.png
+  - 1024 x 1024 px, PNG, square, no rounded corners (the site rounds them).
+  - The app icon from intake §4 (Icon 1024×1024).
+  - Used as the 64px hero icon, the 64px card icon, and the links-hub icon.
+
+shot-1.png
+shot-2.png
+shot-3.png
+  - Framed device screenshots, portrait 9:19.5 aspect ratio (e.g. 1170 x 2535 px).
+  - PNG (or JPG if you also rename the paths in apps.json).
+  - From intake §4: framed exports of the in-app captures (Detail/Care Card,
+    My Plants, Discover, etc.). 3 is the minimum shown here.
+
+OPTIONAL (add more screenshots)
+-------------------------------
+  - Intake §4 allows 3–6 website screenshots. To add shot-4..shot-6.png:
+      1. Drop the PNG here, and
+      2. append its "/assets/apps/sprout/shot-N.png" path to the "screenshots"
+         array of the "sprout" entry in /data/apps.json.
+    The detail page screenshot strip renders straight from that array — no HTML edit.
+
+NOT used on the website (store-only assets from §4)
+---------------------------------------------------
+  - Store screenshot sets and the Google Play feature graphic are uploaded in
+    App Store Connect / Play Console, not committed here.

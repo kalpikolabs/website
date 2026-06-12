@@ -1,0 +1,24 @@
+:root{
+  --violet:#352B7E; --violet-700:#2A2160; --violet-100:#E9E6F7;
+  --coral:#FF6A4D; --coral-600:#E8543A; --coral-100:#FFE8E1;
+  /* Accessible coral for text/interactive use (>=4.5:1 on cream / with white).
+     --coral stays for decorative use only (orbit, CTA-band bg, accents). */
+  --coral-ink:#CE3F26; --coral-ink-700:#AE3019;
+  --amber:#FFB36B;
+  --bg:#FFFBF4; --footer:#241D54;
+  --surface:#FFFFFF; --fill:#F4F0E8; --border:#E5DFD2;
+  --ink:#241D54; --body:#3D3866; --muted:#6A6478; --muted-dark:#A39CC2;
+  /* framed-canvas + labels (redesign) */
+  --frame-bg:#EFEAE0; --frame-border:rgba(36,29,84,.08);
+  --label-violet:#B5AFD4;
+  --ink-dark:#FFF4E3; --body-dark:#D9D4F0;
+  --success:#2E9E6B; --error:#D94A38; --warning:#E59A1C; --info:#3E6FD9;
+  --font-display:'Space Grotesk',-apple-system,'Segoe UI',sans-serif;
+  --font-body:'Inter',-apple-system,'Segoe UI',sans-serif;
+  --font-serif:'Fraunces',Georgia,serif;
+  --s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;
+  --s9:96px;--s10:128px;
+  --r-sm:10px;--r-md:12px;--r-lg:20px;--r-xl:24px;
+  --shadow-card:0 1px 3px rgba(36,29,84,.06);
+  --shadow-hover:0 8px 24px rgba(36,29,84,.10);
+}

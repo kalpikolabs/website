@@ -1,0 +1,55 @@
+{
+  "_howto": [
+    "ADD AN APP (manual, by design — there is no admin page):",
+    "1. Add an entry to \"apps\" below (copy the template object).",
+    "2. Drop icon.png + shot-N.png into /assets/apps/<slug>/.",
+    "3. Run Prompts 3-5 for the app's legal (privacy + terms) and detail pages.",
+    "4. Add the new URLs to sitemap.xml.",
+    "5. git push.  (The 'save' action on GitHub Pages is a git commit.)",
+    "NOTE: privacy + terms pages are ALWAYS static HTML — never rendered from this file."
+  ],
+  "apps": [
+    {
+      "slug": "app-one",
+      "name": "App One",
+      "tagline": "A small, sharp, genuinely useful app for iOS and Android.",
+      "description": "A short, two-line description of what this app does and who it's for.",
+      "icon": "/assets/app-placeholder-icon.svg",
+      "status": "coming-soon",
+      "eta": "",
+      "appstore_url": "",
+      "playstore_url": "",
+      "screenshots": [
+        "/apps/app-one/assets/screenshot-1.svg",
+        "/apps/app-one/assets/screenshot-2.svg",
+        "/apps/app-one/assets/screenshot-3.svg"
+      ],
+      "features": [
+        {"icon": "⚡", "title": "Fast and focused", "text": "Opens instantly and does one job well, with no clutter and nothing to learn."},
+        {"icon": "🔒", "title": "Private by default", "text": "Your data stays on your device. No accounts, no tracking, no ads."},
+        {"icon": "✨", "title": "Made with care", "text": "Built and maintained by a one-person studio that actually replies to email."}
+      ]
+    },
+    {
+      "slug": "sprout",
+      "name": "Sprout",
+      "tagline": "Scan any plant, get its whole story.",
+      "description": "Point your camera at a plant for a beautiful care card + gentle watering reminders. No account.",
+      "icon": "/assets/apps/sprout/icon.png",
+      "status": "coming-soon",
+      "eta": "",
+      "appstore_url": "",
+      "playstore_url": "",
+      "screenshots": [
+        "/assets/apps/sprout/shot-1.png",
+        "/assets/apps/sprout/shot-2.png",
+        "/assets/apps/sprout/shot-3.png"
+      ],
+      "features": [
+        {"icon": "📷", "title": "Instant ID", "text": "Snap a plant and get its name + full care card in seconds."},
+        {"icon": "💧", "title": "Gentle reminders", "text": "Calm, per-plant watering nudges — supportive, never naggy."},
+        {"icon": "🌿", "title": "Beautiful cards", "text": "Editorial care cards you'll actually want to screenshot and share."}
+      ]
+    }
+  ]
+}

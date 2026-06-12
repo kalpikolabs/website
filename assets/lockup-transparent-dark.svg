@@ -1,0 +1,7 @@
+<!-- PLACEHOLDER — replace with brand-kit lockup-transparent-dark.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" role="img" aria-label="Kalpiko Labs">
+  <rect x="0" y="4" width="32" height="32" rx="8" fill="#FFF4E3"/>
+  <circle cx="16" cy="20" r="4" fill="#FF6A4D"/>
+  <circle cx="16" cy="20" r="9" fill="none" stroke="#FFB36B" stroke-width="1.5"/>
+  <text x="44" y="27" font-family="'Fraunces',Georgia,serif" font-size="20" font-style="italic" font-weight="600" fill="#FFF4E3">Kalpiko Labs</text>
+</svg>
