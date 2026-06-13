@@ -1,0 +1,32 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: forest green, full-bleed, no transparency, no rounded corners (stores round it) -->
+  <rect width="1024" height="1024" fill="#2E5F3F"/>
+
+  <!-- Sprout mark, centered -->
+  <g transform="translate(512 512)">
+    <!-- Stem -->
+    <path d="M 0 200 C 0 90, 0 40, 0 -40"
+          stroke="#FAF6F0" stroke-width="26" stroke-linecap="round" fill="none"/>
+
+    <!-- Left leaf -->
+    <path d="M 0 30
+             C -150 10, -200 -120, -120 -210
+             C -30 -150, 10 -50, 0 30 Z"
+          fill="#FAF6F0"/>
+    <!-- Left leaf vein -->
+    <path d="M -8 10 C -70 -40, -95 -110, -118 -185"
+          stroke="#2E5F3F" stroke-width="14" stroke-linecap="round" fill="none"/>
+
+    <!-- Right leaf -->
+    <path d="M 0 30
+             C 150 10, 200 -120, 120 -210
+             C 30 -150, -10 -50, 0 30 Z"
+          fill="#FAF6F0"/>
+    <!-- Right leaf vein -->
+    <path d="M 8 10 C 70 -40, 95 -110, 118 -185"
+          stroke="#2E5F3F" stroke-width="14" stroke-linecap="round" fill="none"/>
+
+    <!-- Terracotta accent: a small sprouting seed/bud at the base of the stem -->
+    <circle cx="0" cy="210" r="34" fill="#C26B4E"/>
+  </g>
+</svg>
