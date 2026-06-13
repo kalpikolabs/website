@@ -1,0 +1,36 @@
+PAPERLY — ASSETS TO DROP IN  (/assets/apps/paperly/)
+====================================================
+The website renders the brand icon from icon.svg (delivered in the intake and
+already committed here). The 1024 PNG and screenshots below are still needed.
+Do NOT commit placeholder images — drop the real exports here with these exact
+names.
+
+ALREADY HERE
+------------
+icon.svg
+  - Source/brand icon from the intake; used as the website icon (grid, detail,
+    legal strips, links hub). Crisp at every size.
+
+REQUIRED — STORE ICON
+---------------------
+icon.png   (intake section 4 says this is READY — drop the provided 1024 export here)
+  - 1024 x 1024 px, PNG, NO transparency, NO rounded corners (stores round it).
+  - For App Store Connect / Play Console uploads. (The website uses icon.svg;
+    you may switch the apps.json "icon" path to icon.png if you prefer.)
+
+REQUIRED — WEBSITE SCREENSHOTS (3–6, portrait 9:19.5, 1290 x 2796 px, PNG)
+--------------------------------------------------------------------------
+Status per intake: NOT READY — app still in build (core flows done through Merge).
+Capture these from the built app and drop them in:
+  shot-1.png  — Home / tool grid (Merge, Compress, Photos→PDF, Convert)
+  shot-2.png  — Merge PDFs (reorder + combine)
+  shot-3.png  — Compress a PDF (fit-the-upload-limit result)
+  shot-4.png  — Image convert (HEIC / JPG / PNG)
+  - apps.json currently lists shot-1..4. To add up to 6 (e.g. Photos→PDF, the
+    paywall), add files here and extend the "screenshots" array of the
+    "paperly" entry in /data/apps.json — the detail-page strip renders from it.
+
+STORE-ONLY (uploaded to the consoles, NOT committed here)
+---------------------------------------------------------
+  - Apple 6.9" + 6.5" screenshot sets, Google set (min 2, 9:16)
+  - Google Play feature graphic — 1024 x 500 PNG

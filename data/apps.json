@@ -146,6 +146,40 @@
           "text": "Search every receipt by store, amount or note in seconds."
         }
       ]
+    },
+    {
+      "slug": "paperly",
+      "name": "Paperly",
+      "tagline": "PDF & image tools that never leave your phone",
+      "description": "Merge, compress, convert, and lock PDFs & images — 100% on your device. No account, no ads, nothing ever uploaded.",
+      "icon": "/assets/apps/paperly/icon.svg",
+      "status": "coming-soon",
+      "eta": "",
+      "appstore_url": "https://www.apple.com/app-store/",
+      "playstore_url": "https://play.google.com/store/search?q=Paperly&c=apps",
+      "screenshots": [
+        "/assets/apps/paperly/shot-1.png",
+        "/assets/apps/paperly/shot-2.png",
+        "/assets/apps/paperly/shot-3.png",
+        "/assets/apps/paperly/shot-4.png"
+      ],
+      "features": [
+        {
+          "icon": "🔒",
+          "title": "Private by design",
+          "text": "Every file is processed on your device and never uploaded."
+        },
+        {
+          "icon": "🧰",
+          "title": "All-in-one toolkit",
+          "text": "Merge, compress, photos→PDF, and HEIC/JPG/PNG convert."
+        },
+        {
+          "icon": "🚫",
+          "title": "No ads, no accounts",
+          "text": "No sign-up, no tracking, no ads — pay once or not at all."
+        }
+      ]
     }
   ]
 }
