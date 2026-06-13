@@ -17,17 +17,29 @@
       "icon": "/assets/apps/sprout/icon.svg",
       "status": "coming-soon",
       "eta": "",
-      "appstore_url": "",
-      "playstore_url": "",
+      "appstore_url": "https://www.apple.com/app-store/",
+      "playstore_url": "https://play.google.com/store/search?q=Sprout&c=apps",
       "screenshots": [
         "/assets/apps/sprout/shot-1.png",
         "/assets/apps/sprout/shot-2.png",
         "/assets/apps/sprout/shot-3.png"
       ],
       "features": [
-        {"icon": "📷", "title": "Instant ID", "text": "Snap a plant and get its name + full care card in seconds."},
-        {"icon": "💧", "title": "Gentle reminders", "text": "Calm, per-plant watering nudges — supportive, never naggy."},
-        {"icon": "🌿", "title": "Beautiful cards", "text": "Editorial care cards you'll actually want to screenshot and share."}
+        {
+          "icon": "📷",
+          "title": "Instant ID",
+          "text": "Snap a plant and get its name + full care card in seconds."
+        },
+        {
+          "icon": "💧",
+          "title": "Gentle reminders",
+          "text": "Calm, per-plant watering nudges — supportive, never naggy."
+        },
+        {
+          "icon": "🌿",
+          "title": "Beautiful cards",
+          "text": "Editorial care cards you'll actually want to screenshot and share."
+        }
       ]
     },
     {
@@ -38,8 +50,8 @@
       "icon": "/assets/apps/approved/icon.svg",
       "status": "coming-soon",
       "eta": "",
-      "appstore_url": "",
-      "playstore_url": "",
+      "appstore_url": "https://www.apple.com/app-store/",
+      "playstore_url": "https://play.google.com/store/search?q=Approved&c=apps",
       "screenshots": [
         "/assets/apps/approved/shot-1.png",
         "/assets/apps/approved/shot-2.png",
@@ -48,9 +60,21 @@
         "/assets/apps/approved/shot-5.png"
       ],
       "features": [
-        {"icon": "✅", "title": "The Compliance Coach", "text": "Every rule shown as a green tick or amber flag, with a plain-language reason and a fix."},
-        {"icon": "🔒", "title": "Your photo stays yours", "text": "Processed on-device, checked once by AI, never used for training, no account, no tracking."},
-        {"icon": "🖨️", "title": "File + print sheet", "text": "Exact-spec digital photo plus a 4×6 and A4 sheet with cut lines for any photo shop."}
+        {
+          "icon": "✅",
+          "title": "The Compliance Coach",
+          "text": "Every rule shown as a green tick or amber flag, with a plain-language reason and a fix."
+        },
+        {
+          "icon": "🔒",
+          "title": "Your photo stays yours",
+          "text": "Processed on-device, checked once by AI, never used for training, no account, no tracking."
+        },
+        {
+          "icon": "🖨️",
+          "title": "File + print sheet",
+          "text": "Exact-spec digital photo plus a 4×6 and A4 sheet with cut lines for any photo shop."
+        }
       ]
     },
     {
@@ -61,8 +85,8 @@
       "icon": "/assets/apps/unpile/icon.svg",
       "status": "coming-soon",
       "eta": "",
-      "appstore_url": "",
-      "playstore_url": "",
+      "appstore_url": "https://www.apple.com/app-store/",
+      "playstore_url": "https://play.google.com/store/search?q=Unpile&c=apps",
       "screenshots": [
         "/assets/apps/unpile/shot-1.png",
         "/assets/apps/unpile/shot-2.png",
@@ -71,9 +95,21 @@
         "/assets/apps/unpile/shot-5.png"
       ],
       "features": [
-        {"icon": "📸", "title": "Snap the pile", "text": "Photograph the mess; AI turns it into tiny, doable missions."},
-        {"icon": "⏱️", "title": "Start, don't stress", "text": "A timer and a companion keep you going — XP for starting, never shame for stopping."},
-        {"icon": "✨", "title": "See the proof", "text": "A before/after card celebrates what you did and is yours to share."}
+        {
+          "icon": "📸",
+          "title": "Snap the pile",
+          "text": "Photograph the mess; AI turns it into tiny, doable missions."
+        },
+        {
+          "icon": "⏱️",
+          "title": "Start, don't stress",
+          "text": "A timer and a companion keep you going — XP for starting, never shame for stopping."
+        },
+        {
+          "icon": "✨",
+          "title": "See the proof",
+          "text": "A before/after card celebrates what you did and is yours to share."
+        }
       ]
     },
     {
@@ -84,8 +120,8 @@
       "icon": "/assets/apps/receipt-keeper/icon.svg",
       "status": "coming-soon",
       "eta": "",
-      "appstore_url": "",
-      "playstore_url": "",
+      "appstore_url": "https://www.apple.com/app-store/",
+      "playstore_url": "https://play.google.com/store/search?q=Receipt%20Keeper&c=apps",
       "screenshots": [
         "/assets/apps/receipt-keeper/shot-1.png",
         "/assets/apps/receipt-keeper/shot-2.png",
@@ -94,9 +130,21 @@
         "/assets/apps/receipt-keeper/shot-5.png"
       ],
       "features": [
-        {"icon": "📸", "title": "Snap and forget", "text": "Photograph a receipt; AI reads the merchant, amount and date for you."},
-        {"icon": "🔔", "title": "Warranty alerts", "text": "Get reminded before a warranty runs out — with the receipt ready to go."},
-        {"icon": "🔎", "title": "Find it instantly", "text": "Search every receipt by store, amount or note in seconds."}
+        {
+          "icon": "📸",
+          "title": "Snap and forget",
+          "text": "Photograph a receipt; AI reads the merchant, amount and date for you."
+        },
+        {
+          "icon": "🔔",
+          "title": "Warranty alerts",
+          "text": "Get reminded before a warranty runs out — with the receipt ready to go."
+        },
+        {
+          "icon": "🔎",
+          "title": "Find it instantly",
+          "text": "Search every receipt by store, amount or note in seconds."
+        }
       ]
     }
   ]
