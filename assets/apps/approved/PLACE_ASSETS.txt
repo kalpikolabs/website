@@ -1,0 +1,34 @@
+APPROVED — ASSETS TO DROP IN  (/assets/apps/approved/)
+=======================================================
+The website renders the brand icon from icon.svg (delivered in the intake and
+already committed here). The 1024 PNG and screenshots below are still needed.
+Do NOT commit placeholder images — drop the real exports here with these exact
+names.
+
+ALREADY HERE
+------------
+icon.svg
+  - Source/brand icon from the intake; used as the website icon (grid, detail,
+    legal strips, links hub). Crisp at every size.
+
+REQUIRED — STORE ICON
+---------------------
+icon.png   (a.k.a. approved-icon-1024.png from the intake)
+  - 1024 x 1024 px, PNG, NO transparency, NO rounded corners (stores round it).
+  - For App Store Connect / Play Console uploads. (The website uses icon.svg;
+    you may switch the apps.json "icon" path to icon.png if you prefer.)
+
+REQUIRED — WEBSITE SCREENSHOTS (3–6, portrait 9:19.5, 1290 x 2796 px, PNG)
+--------------------------------------------------------------------------
+shot-1.png  — Home / country + document picker
+shot-2.png  — Capture screen with the butter oval face-guide
+shot-3.png  — Results: compliance checklist + green pass gauge
+shot-4.png  — Print sheet (4x6 / A4 with cut lines)
+shot-5.png  — Paywall ("Get your approved photo")
+  - To add or remove shots, edit the "screenshots" array of the "approved"
+    entry in /data/apps.json — the detail-page strip renders straight from it.
+
+STORE-ONLY (uploaded to the consoles, NOT committed here)
+---------------------------------------------------------
+  - Apple 6.9" + 6.5" screenshot sets, Google set (min 2, 9:16)
+  - Google Play feature graphic — 1024 x 500 PNG (icon + tagline on ivory ground)

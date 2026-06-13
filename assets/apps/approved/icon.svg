@@ -1,0 +1,36 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- APPROVED app icon. Brand: warm ivory ground, charcoal photo frame, butter accent, approval-green check.
+       No transparency, full-bleed square (stores apply their own rounding). -->
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF6"/>
+      <stop offset="1" stop-color="#F1EBDC"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2C2A25"/>
+      <stop offset="1" stop-color="#201F1C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1024" height="1024" fill="url(#ground)"/>
+
+  <!-- passport-photo frame: a portrait card, the core product object -->
+  <rect x="298" y="236" width="428" height="556" rx="44" fill="url(#frame)"/>
+  <!-- inner ivory plate (the photo area), with the spec's signature uniform background -->
+  <rect x="338" y="276" width="348" height="476" rx="26" fill="#FAF6ED"/>
+
+  <!-- simplified head-and-shoulders silhouette, centered to the face-height guide -->
+  <g fill="#C9BFA6">
+    <circle cx="512" cy="430" r="92"/>
+    <path d="M512 540c-104 0-178 70-190 168 -2 16 10 30 26 30h328c16 0 28-14 26-30 -12-98-86-168-190-168z"/>
+  </g>
+
+  <!-- butter accent: the live face-guide oval, the app's signature capture element -->
+  <ellipse cx="512" cy="452" rx="150" ry="196" fill="none" stroke="#F5D565" stroke-width="14" stroke-dasharray="34 24" stroke-linecap="round"/>
+
+  <!-- approval badge: green disc + white check, the "passed" verdict, bottom-right overlap -->
+  <circle cx="690" cy="724" r="116" fill="#FAF6ED"/>
+  <circle cx="690" cy="724" r="96" fill="#2D9A5B"/>
+  <path d="M644 726l34 34 64-72" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

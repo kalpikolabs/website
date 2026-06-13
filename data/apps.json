@@ -50,6 +50,29 @@
         {"icon": "💧", "title": "Gentle reminders", "text": "Calm, per-plant watering nudges — supportive, never naggy."},
         {"icon": "🌿", "title": "Beautiful cards", "text": "Editorial care cards you'll actually want to screenshot and share."}
       ]
+    },
+    {
+      "slug": "approved",
+      "name": "Approved",
+      "tagline": "Passport photos that pass — before you pay.",
+      "description": "Snap a selfie, get a perfectly sized passport or visa photo. Every rule checked, on your device.",
+      "icon": "/assets/apps/approved/icon.svg",
+      "status": "coming-soon",
+      "eta": "",
+      "appstore_url": "",
+      "playstore_url": "",
+      "screenshots": [
+        "/assets/apps/approved/shot-1.png",
+        "/assets/apps/approved/shot-2.png",
+        "/assets/apps/approved/shot-3.png",
+        "/assets/apps/approved/shot-4.png",
+        "/assets/apps/approved/shot-5.png"
+      ],
+      "features": [
+        {"icon": "✅", "title": "The Compliance Coach", "text": "Every rule shown as a green tick or amber flag, with a plain-language reason and a fix."},
+        {"icon": "🔒", "title": "Your photo stays yours", "text": "Processed on-device, checked once by AI, never used for training, no account, no tracking."},
+        {"icon": "🖨️", "title": "File + print sheet", "text": "Exact-spec digital photo plus a 4×6 and A4 sheet with cut lines for any photo shop."}
+      ]
     }
   ]
 }
