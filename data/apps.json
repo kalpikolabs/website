@@ -75,6 +75,29 @@
         {"icon": "⏱️", "title": "Start, don't stress", "text": "A timer and a companion keep you going — XP for starting, never shame for stopping."},
         {"icon": "✨", "title": "See the proof", "text": "A before/after card celebrates what you did and is yours to share."}
       ]
+    },
+    {
+      "slug": "receipt-keeper",
+      "name": "Receipt Keeper",
+      "tagline": "Never lose a receipt again.",
+      "description": "Snap any receipt and AI files it for you — searchable, with warranty alerts before they expire.",
+      "icon": "/assets/apps/receipt-keeper/icon.svg",
+      "status": "coming-soon",
+      "eta": "",
+      "appstore_url": "",
+      "playstore_url": "",
+      "screenshots": [
+        "/assets/apps/receipt-keeper/shot-1.png",
+        "/assets/apps/receipt-keeper/shot-2.png",
+        "/assets/apps/receipt-keeper/shot-3.png",
+        "/assets/apps/receipt-keeper/shot-4.png",
+        "/assets/apps/receipt-keeper/shot-5.png"
+      ],
+      "features": [
+        {"icon": "📸", "title": "Snap and forget", "text": "Photograph a receipt; AI reads the merchant, amount and date for you."},
+        {"icon": "🔔", "title": "Warranty alerts", "text": "Get reminded before a warranty runs out — with the receipt ready to go."},
+        {"icon": "🔎", "title": "Find it instantly", "text": "Search every receipt by store, amount or note in seconds."}
+      ]
     }
   ]
 }

@@ -1,0 +1,45 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Receipt Keeper app icon — no transparency, full-bleed (stores apply the rounded mask) -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#27A65C"/>
+      <stop offset="1" stop-color="#1F8A4C"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F2F7F3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- Receipt paper with a torn/zigzag bottom edge -->
+  <g>
+    <path d="M338 250
+             h348
+             a0 0 0 0 1 0 0
+             v470
+             l-29 26 -29 -26 -29 26 -29 -26 -29 26 -29 -26 -29 26 -29 -26 -29 26 -29 -26 -29 26 -29 -26 -29 26 -29 -26
+             v-470 z"
+          fill="url(#paper)"/>
+  </g>
+
+  <!-- Receipt lines (text rows) -->
+  <g fill="#C7D6CB">
+    <rect x="392" y="330" width="240" height="26" rx="13"/>
+    <rect x="392" y="392" width="180" height="22" rx="11"/>
+    <rect x="392" y="446" width="200" height="22" rx="11"/>
+  </g>
+
+  <!-- Total row, emphasized in ink -->
+  <g fill="#14213D">
+    <rect x="392" y="520" width="120" height="30" rx="15"/>
+    <rect x="566" y="520" width="66" height="30" rx="15"/>
+  </g>
+
+  <!-- "Saved" check badge, money-green, overlapping bottom-right -->
+  <circle cx="676" cy="640" r="92" fill="#1F8A4C" stroke="#FFFFFF" stroke-width="18"/>
+  <path d="M636 642 l30 30 56 -64" fill="none" stroke="#FFFFFF" stroke-width="26"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
