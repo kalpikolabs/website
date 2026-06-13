@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About — Kalpiko Labs</title>
-  <meta name="description" content="Kalpiko Labs is a one-person indie app studio. The name comes from the Sanskrit kalpana — to imagine, to invent.">
+  <title>Unpile — Kalpiko Labs</title>
+  <meta name="description" content="Unpile — can't start? Snap the pile. Photograph an overwhelming mess and AI breaks it into tiny, ~5-minute missions, with a timer, a companion, and a shareable before/after. Coming soon from Kalpiko Labs.">
   <meta name="theme-color" content="#352B7E">
-  <link rel="canonical" href="https://kalpikolabs.com/about/">
+  <link rel="canonical" href="https://kalpikolabs.com/apps/unpile/">
 
-  <!-- Open Graph -->
+  <!-- Open Graph (image = first screenshot, per spec) -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kalpikolabs.com/about/">
-  <meta property="og:title" content="About — Kalpiko Labs">
-  <meta property="og:description" content="A one-person indie app studio. From kalpana — to imagine.">
-  <meta property="og:image" content="https://kalpikolabs.com/assets/og-lockup.png">
+  <meta property="og:url" content="https://kalpikolabs.com/apps/unpile/">
+  <meta property="og:title" content="Unpile — Kalpiko Labs">
+  <meta property="og:description" content="Can't start? Snap the pile. Tiny timed steps you can actually start. Coming soon.">
+  <meta property="og:image" content="https://kalpikolabs.com/assets/apps/unpile/shot-1.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About — Kalpiko Labs">
-  <meta name="twitter:description" content="A one-person indie app studio. From kalpana — to imagine.">
-  <meta name="twitter:image" content="https://kalpikolabs.com/assets/og-lockup.png">
+  <meta name="twitter:title" content="Unpile — Kalpiko Labs">
+  <meta name="twitter:description" content="Can't start? Snap the pile. Coming soon.">
+  <meta name="twitter:image" content="https://kalpikolabs.com/assets/apps/unpile/shot-1.png">
 
   <!-- Favicons -->
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="/styles/tokens.css">
   <link rel="stylesheet" href="/styles/site.css">
 </head>
-<body class="has-hero">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="frame">
 
@@ -86,86 +86,112 @@
   </div>
 
   <!-- ===== Main ===== -->
-  <main id="main">
+  <!-- Hero / features / screenshots render from /data/apps.json (slug=unpile)
+       via /js/site.js. The static markup below is the no-JS fallback. -->
+  <main id="main" data-app-detail data-slug="unpile">
 
     <!-- 1. Compact hero -->
-    <section class="hero hero--compact">
-      <div class="hero__content">
-        <p class="eyebrow">About</p>
-        <h1 class="hero__title"><span>The Lab</span></h1>
-        <p class="hero__accent">from kalpana (कल्पना) — to imagine, to form, to invent.</p>
+    <section class="section product-hero">
+      <div class="container">
+        <img class="product-hero__icon" data-app-icon src="/assets/apps/unpile/icon.svg"
+             alt="Unpile icon" width="96" height="96"
+             onerror="this.onerror=null;this.src='/assets/app-placeholder-icon.svg'">
+        <h1 data-app-name>Unpile</h1>
+        <p class="product-hero__tagline" data-app-tagline>Can't start? Snap the pile.</p>
+
+        <div class="store-badges" data-app-actions>
+          <span class="pill pill--soon">Coming soon</span>
+        </div>
+        <p class="product-hero__notify">
+          <a href="mailto:support@kalpikolabs.com?subject=Notify%20me%20when%20Unpile%20launches">Email me when it launches →</a>
+        </p>
       </div>
     </section>
 
-    <!-- 2. The name -->
-    <section class="section section--center" aria-labelledby="name-heading">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="name-heading">Why “Kalpiko”?</h2>
-        </div>
-        <div class="name-col">
-          <p>The root is the Sanskrit <span class="accent">kalpana</span> — the act of imagining, forming, inventing. It’s the moment before a thing exists, when it’s still just an idea worth building well.</p>
-          <p>“Kalpiko” itself is a coined word — an invented name for a studio whose whole job is to invent. It doesn’t mean anything yet. That’s the point: it means whatever we make of it.</p>
-        </div>
+    <!-- 2. Intro -->
+    <section class="section about" style="padding-top:0">
+      <div class="container about__inner">
+        <p>Unpile is a focus and decluttering tool designed for ADHD brains: when a space gets messy and you freeze, you photograph the overwhelming pile and AI breaks it into 4–6 tiny, roughly five-minute “missions” — so you never have to face the whole task at once.</p>
+        <p>A timer and a calm on-screen companion keep you company while you work — a gentle stand-in for body-doubling. You earn XP just for starting, and you’re never penalized for stopping. Finishing produces a shareable before/after card: the proof-of-progress that makes the work feel worth it. It’s anti-shame by design — no broken-streak guilt, grace days, and gentle copy throughout — for anyone who freezes when a space gets messy: ADHD adults first, but it speaks to anxiety, burnout, and overwhelm too.</p>
       </div>
     </section>
 
-    <!-- 3. The ethos -->
-    <section class="section section--center" aria-labelledby="ethos-heading">
+    <!-- 3. Three-up feature grid -->
+    <section class="section" style="padding-top:0" aria-labelledby="features-heading">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">How we build</p>
-          <h2 id="ethos-heading">Small, sharp, honest.</h2>
-        </div>
-        <div class="apps__grid">
-          <article class="card app-card">
-            <h4>Small</h4>
-            <p class="app-card__desc">Apps that do one thing genuinely well, instead of ten things badly.</p>
+        <h2 id="features-heading">What it does</h2>
+        <div class="features" data-app-features>
+          <article class="card feature">
+            <span class="feature__icon" aria-hidden="true">📸</span>
+            <h5>Snap the pile</h5>
+            <p>Photograph the mess; AI turns it into tiny, doable missions.</p>
           </article>
-          <article class="card app-card">
-            <h4>Sharp</h4>
-            <p class="app-card__desc">A native feel on each platform — fast, quiet, and free of bloat.</p>
+          <article class="card feature">
+            <span class="feature__icon" aria-hidden="true">⏱️</span>
+            <h5>Start, don't stress</h5>
+            <p>A timer and a companion keep you going — XP for starting, never shame for stopping.</p>
           </article>
-          <article class="card app-card">
-            <h4>Honest</h4>
-            <p class="app-card__desc">Clear pricing, plain-English privacy, and no dark patterns. Ever.</p>
+          <article class="card feature">
+            <span class="feature__icon" aria-hidden="true">✨</span>
+            <h5>See the proof</h5>
+            <p>A before/after card celebrates what you did and is yours to share.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- 4. The maker (left-aligned — the asymmetric moment) -->
-    <section class="section" aria-labelledby="maker-heading">
+    <!-- 4. Screenshot strip -->
+    <section class="section" style="padding-top:0" aria-labelledby="shots-heading">
       <div class="container">
-        <div class="maker">
-          <h3 id="maker-heading">Who’s behind this</h3>
-          <p>Kalpiko Labs is an independent developer building a small lineup of apps in public — shipping early, writing about the process, and listening to the people who actually use the things.</p>
-          <p>It’s a studio of one, on purpose. Fewer apps, more care, and a real person on the other end of every email.</p>
-          <p class="maker__links">
-            <a href="#" rel="noopener">GitHub ↗</a>
-            <a href="#" rel="noopener">X ↗</a>
-          </p>
+        <h2 id="shots-heading">A look inside</h2>
+      </div>
+      <div class="container">
+        <div class="shots" data-app-shots aria-label="Unpile screenshots">
+          <img class="shot" src="/assets/apps/unpile/shot-1.png" alt="Unpile home with your piles" width="270" height="585" loading="lazy">
+          <img class="shot" src="/assets/apps/unpile/shot-2.png" alt="Unpile capture — snap the pile" width="270" height="585" loading="lazy">
+          <img class="shot" src="/assets/apps/unpile/shot-3.png" alt="Unpile breakdown into tiny missions" width="270" height="585" loading="lazy">
+          <img class="shot" src="/assets/apps/unpile/shot-4.png" alt="Unpile focus timer with companion" width="270" height="585" loading="lazy">
+          <img class="shot" src="/assets/apps/unpile/shot-5.png" alt="Unpile before/after win card" width="270" height="585" loading="lazy">
         </div>
       </div>
     </section>
 
-    <!-- 5. What's cooking -->
-    <section class="section section--center" style="padding-top:0" aria-label="What’s cooking">
+    <!-- 5. Mini-FAQ -->
+    <section class="section" style="padding-top:0" aria-labelledby="faq-heading">
       <div class="container">
-        <p class="cooking">First apps: <strong>Approved</strong> &amp; <strong>Sprout</strong> — coming soon.</p>
-        <span class="pill pill--soon">In progress</span>
+        <h2 id="faq-heading">Good to know</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__summary">Is Unpile a medical or ADHD treatment app?</summary>
+            <div class="faq__answer"><p>No. It’s a focus and decluttering tool designed to be friendly to ADHD brains, but it doesn’t diagnose or treat anything.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__summary">Do my photos leave my phone?</summary>
+            <div class="faq__answer"><p>Only the pile photo is sent once to an AI service to generate your missions; nothing is stored on a server and there are no accounts.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__summary">What happens if I miss a day?</summary>
+            <div class="faq__answer"><p>Nothing bad. There are no broken streaks — Unpile rewards starting, never punishes stopping.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__summary">Do I need an account?</summary>
+            <div class="faq__answer"><p>No. Everything lives on your device.</p></div>
+          </details>
+        </div>
+        <p class="contact-card__sla" style="max-width:768px;margin:24px auto 0;text-align:left">A note on limits: the AI mission breakdown depends on photo clarity — if the AI can’t read the image, a generic starter list is used instead. Reminders require notification permission. And because data is on-device only, it does not sync across devices in v1.</p>
       </div>
     </section>
 
-    <!-- 6. Coral CTA card -->
-    <section class="section" style="padding-top:0">
+    <!-- 6. Compact CTA -->
+    <section class="section app-cta" aria-labelledby="cta-heading">
       <div class="container">
-        <div class="cta-band">
-          <div class="cta-band__inner">
-            <h2>Have an idea? It’s probably an app.</h2>
-            <a class="btn btn--secondary on-coral" href="/support/#contact">Say hello</a>
-          </div>
+        <h2 id="cta-heading">Get Unpile</h2>
+        <div class="store-badges" data-app-actions>
+          <span class="pill pill--soon">Coming soon</span>
         </div>
+        <p class="product-hero__notify">
+          <a href="mailto:support@kalpikolabs.com?subject=Notify%20me%20when%20Unpile%20launches">Email me when it launches →</a>
+        </p>
       </div>
     </section>
 

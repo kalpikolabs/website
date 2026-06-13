@@ -52,6 +52,29 @@
         {"icon": "🔒", "title": "Your photo stays yours", "text": "Processed on-device, checked once by AI, never used for training, no account, no tracking."},
         {"icon": "🖨️", "title": "File + print sheet", "text": "Exact-spec digital photo plus a 4×6 and A4 sheet with cut lines for any photo shop."}
       ]
+    },
+    {
+      "slug": "unpile",
+      "name": "Unpile",
+      "tagline": "Can't start? Snap the pile.",
+      "description": "Turns the mess you've been avoiding into tiny timed steps you can actually start — with a before/after to prove you did.",
+      "icon": "/assets/apps/unpile/icon.svg",
+      "status": "coming-soon",
+      "eta": "",
+      "appstore_url": "",
+      "playstore_url": "",
+      "screenshots": [
+        "/assets/apps/unpile/shot-1.png",
+        "/assets/apps/unpile/shot-2.png",
+        "/assets/apps/unpile/shot-3.png",
+        "/assets/apps/unpile/shot-4.png",
+        "/assets/apps/unpile/shot-5.png"
+      ],
+      "features": [
+        {"icon": "📸", "title": "Snap the pile", "text": "Photograph the mess; AI turns it into tiny, doable missions."},
+        {"icon": "⏱️", "title": "Start, don't stress", "text": "A timer and a companion keep you going — XP for starting, never shame for stopping."},
+        {"icon": "✨", "title": "See the proof", "text": "A before/after card celebrates what you did and is yours to share."}
+      ]
     }
   ]
 }

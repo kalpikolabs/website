@@ -1,0 +1,40 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Unpile app icon — no transparency, full-bleed (stores apply the rounded mask) -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8FD9EC"/>
+      <stop offset="1" stop-color="#6FC4DD"/>
+    </linearGradient>
+    <linearGradient id="tileTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F3FAFD"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- Soft scattered "pile" pieces (the mess), lower-left, slightly transparent white -->
+  <g fill="#FFFFFF" opacity="0.28">
+    <rect x="196" y="690" width="150" height="150" rx="34" transform="rotate(-18 271 765)"/>
+    <rect x="300" y="724" width="132" height="132" rx="30" transform="rotate(12 366 790)"/>
+    <rect x="232" y="600" width="120" height="120" rx="28" transform="rotate(8 292 660)"/>
+  </g>
+
+  <!-- The neat resolved stack (order), center-right, solid white -->
+  <g>
+    <rect x="470" y="612" width="300" height="120" rx="30" fill="url(#tileTop)"/>
+    <rect x="498" y="486" width="300" height="120" rx="30" fill="url(#tileTop)"/>
+    <rect x="470" y="360" width="300" height="120" rx="30" fill="url(#tileTop)"/>
+  </g>
+
+  <!-- "Started" spark — the moment of momentum, in deep ink -->
+  <g fill="#14323B">
+    <path d="M641 196
+             l26 70 70 26 -70 26 -26 70 -26 -70 -70 -26 70 -26 z"/>
+  </g>
+
+  <!-- Small check on the top tile to signal progress -->
+  <path d="M556 420 l34 34 64 -70" fill="none" stroke="#3E8E5A" stroke-width="26"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
