@@ -228,11 +228,12 @@
       <div class="container">
         <h3 id="legal-heading">App privacy &amp; terms</h3>
         <div class="legal-links" data-support-applinks>
-          <!-- {{APP_LEGAL_LINKS}} — one .legal-links__app row per shipped app:
+          <!-- {{APP_LEGAL_LINKS}} — one .legal-links__app row per app, rendered from
+               /data/apps.json by /js/site.js:
           <div class="legal-links__app">
-            <span class="legal-links__name">App One</span>
-            <a href="/apps/app-one/privacy/">Privacy Policy</a>
-            <a href="/apps/app-one/terms/">Terms of Use</a>
+            <span class="legal-links__name">App Name</span>
+            <a href="/apps/&lt;slug&gt;/privacy/">Privacy Policy</a>
+            <a href="/apps/&lt;slug&gt;/terms/">Terms of Use</a>
           </div>
           -->
           <p class="legal-links__empty">No apps have shipped yet. Privacy policies and terms will be listed here as each app launches — and are always linked inside the app itself.</p>
@@ -253,7 +254,8 @@
           <nav class="footer__col" aria-label="Apps">
             <h2 class="footer__col-title">Apps</h2>
             <ul data-footer-apps>
-              <li><a href="/apps/app-one/">App One</a></li>
+              <li><a href="/apps/sprout/">Sprout</a></li>
+              <li><a href="/apps/approved/">Approved</a></li>
             </ul>
           </nav>
 
@@ -269,8 +271,10 @@
           <nav class="footer__col" aria-label="Legal">
             <h2 class="footer__col-title">Legal</h2>
             <ul data-footer-legal>
-              <li><a href="/apps/app-one/privacy/">App One — Privacy</a></li>
-              <li><a href="/apps/app-one/terms/">App One — Terms</a></li>
+              <li><a href="/apps/sprout/privacy/">Sprout — Privacy</a></li>
+              <li><a href="/apps/sprout/terms/">Sprout — Terms</a></li>
+              <li><a href="/apps/approved/privacy/">Approved — Privacy</a></li>
+              <li><a href="/apps/approved/terms/">Approved — Terms</a></li>
             </ul>
           </nav>
         </div>

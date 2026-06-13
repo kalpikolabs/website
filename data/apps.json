@@ -10,27 +10,6 @@
   ],
   "apps": [
     {
-      "slug": "app-one",
-      "name": "App One",
-      "tagline": "A small, sharp, genuinely useful app for iOS and Android.",
-      "description": "A short, two-line description of what this app does and who it's for.",
-      "icon": "/assets/app-placeholder-icon.svg",
-      "status": "coming-soon",
-      "eta": "",
-      "appstore_url": "",
-      "playstore_url": "",
-      "screenshots": [
-        "/apps/app-one/assets/screenshot-1.svg",
-        "/apps/app-one/assets/screenshot-2.svg",
-        "/apps/app-one/assets/screenshot-3.svg"
-      ],
-      "features": [
-        {"icon": "⚡", "title": "Fast and focused", "text": "Opens instantly and does one job well, with no clutter and nothing to learn."},
-        {"icon": "🔒", "title": "Private by default", "text": "Your data stays on your device. No accounts, no tracking, no ads."},
-        {"icon": "✨", "title": "Made with care", "text": "Built and maintained by a one-person studio that actually replies to email."}
-      ]
-    },
-    {
       "slug": "sprout",
       "name": "Sprout",
       "tagline": "Scan any plant, get its whole story.",

@@ -298,8 +298,9 @@ body:not(.has-hero) .site-header{
   display:flex;flex-direction:column;align-items:center;text-align:center;
   border:2px solid transparent;
 }
-.app-card:hover{border-color:var(--coral)}
-.app-card:focus-within{border-color:var(--coral)}
+.app-card:hover,.app-card:focus-within{
+  border-color:var(--coral);box-shadow:var(--shadow-hover);transform:translateY(-2px);
+}
 .app-card__icon{
   width:64px;height:64px;border-radius:16px;object-fit:cover;
   margin:0 auto var(--s4);border:1px solid var(--border);
@@ -310,9 +311,17 @@ body:not(.has-hero) .site-header{
 /* stretched link — whole card is clickable; real links inside stay above it */
 .app-card__name a::after{content:"";position:absolute;inset:0;border-radius:inherit}
 .app-card__actions a{position:relative;z-index:1}
+/* bottom affordance so coming-soon cards read as interactive */
+.app-card__more{
+  display:block;margin-top:var(--s4);
+  font:500 15px var(--font-body);color:var(--coral-ink);
+}
+.app-card:hover .app-card__more{color:var(--coral-ink-700)}
+.notify-link{position:relative;z-index:1;font-weight:600}
 .app-card__desc{font-size:15px;line-height:1.55;color:var(--body);margin-bottom:var(--s5);flex:1 1 auto}
 .app-card__actions{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center;justify-content:center}
-.store-badge img{height:40px;width:auto}
+.store-badge{display:inline-flex;position:relative;z-index:1;border-radius:var(--r-sm)}
+.store-badge img{height:44px;width:auto;display:block}
 
 .pill{
   display:inline-flex;align-items:center;
@@ -455,7 +464,7 @@ textarea.cform__input{resize:vertical;min-height:120px}
 .product-hero__tagline{font-size:20px;color:var(--body);max-width:46ch;margin:0 auto var(--s6)}
 
 .store-badges{display:flex;flex-wrap:wrap;gap:var(--s4);justify-content:center;align-items:center}
-.store-badges img{height:52px;width:auto;display:block}
+.store-badges img{height:44px;width:auto;display:block}
 .store-badges a{display:inline-flex;border-radius:var(--r-sm)}
 .store-badges a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 .launch-note{margin:var(--s4) 0 0;font-size:15px}

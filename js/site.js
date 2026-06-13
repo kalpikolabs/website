@@ -108,21 +108,27 @@
     });
   }
 
+  // Store-badge logic — conditional on URL presence ONLY (not status), so an
+  // app goes live simply by pasting its store URLs into apps.json. Used on the
+  // landing card AND each detail page (hero + bottom CTA).
   function actionsInner(p) {
-    if (p.status === 'live') {
-      var h = '';
-      if (p.appstore_url) {
-        h += '<a href="' + esc(p.appstore_url) + '"><img src="/assets/badge-app-store.svg" alt="Download ' +
-             esc(p.name) + ' on the App Store" width="160" height="52" loading="lazy"></a>';
-      }
-      if (p.playstore_url) {
-        h += '<a href="' + esc(p.playstore_url) + '"><img src="/assets/badge-google-play.svg" alt="Get ' +
-             esc(p.name) + ' on Google Play" width="180" height="52" loading="lazy"></a>';
-      }
-      return h;
+    var badges = '';
+    if (p.appstore_url) {
+      badges += '<a class="store-badge" href="' + esc(p.appstore_url) + '" target="_blank" rel="noopener" ' +
+        'aria-label="Download ' + esc(p.name) + ' on the App Store">' +
+        '<img src="/assets/badge-app-store.svg" alt="" loading="lazy"></a>';
     }
+    if (p.playstore_url) {
+      badges += '<a class="store-badge" href="' + esc(p.playstore_url) + '" target="_blank" rel="noopener" ' +
+        'aria-label="Get ' + esc(p.name) + ' on Google Play">' +
+        '<img src="/assets/badge-google-play.svg" alt="" loading="lazy"></a>';
+    }
+    if (badges) return badges;
+    // Neither URL → Coming soon pill + Notify me
     var eta = p.eta ? ' <span class="app-eta">' + esc(p.eta) + '</span>' : '';
-    return '<span class="pill pill--soon">Coming soon</span>' + eta;
+    var notify = '<a class="notify-link" href="mailto:support@kalpikolabs.com?subject=Notify%20me%20about%20' +
+      encodeURIComponent(p.name) + '">Notify me</a>';
+    return '<span class="pill pill--soon">Coming soon</span>' + eta + notify;
   }
 
   function renderFooter(apps) {
@@ -152,6 +158,7 @@
         '<h4 class="app-card__name"><a href="/apps/' + esc(p.slug) + '/">' + esc(p.name) + '</a></h4>' +
         '<p class="app-card__desc">' + esc(p.description) + '</p>' +
         '<div class="app-card__actions">' + actionsInner(p) + '</div>' +
+        '<span class="app-card__more" aria-hidden="true">View details →</span>' +
         '</article>';
     }).join('');
   }
@@ -226,8 +233,8 @@
     if (name) { name.textContent = p.name; }
     var tag = root.querySelector('[data-app-tagline]');
     if (tag) { tag.textContent = p.tagline; }
-    var act = root.querySelector('[data-app-actions]');
-    if (act) { act.innerHTML = actionsInner(p); }
+    var acts = root.querySelectorAll('[data-app-actions]');
+    for (var a = 0; a < acts.length; a++) { acts[a].innerHTML = actionsInner(p); }
 
     var feats = root.querySelector('[data-app-features]');
     if (feats) {
