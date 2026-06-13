@@ -294,15 +294,22 @@ body:not(.has-hero) .site-header{
   display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s6);margin-top:var(--s7);
 }
 .app-card{
+  position:relative;
   display:flex;flex-direction:column;align-items:center;text-align:center;
   border:2px solid transparent;
 }
 .app-card:hover{border-color:var(--coral)}
+.app-card:focus-within{border-color:var(--coral)}
 .app-card__icon{
   width:64px;height:64px;border-radius:16px;object-fit:cover;
   margin:0 auto var(--s4);border:1px solid var(--border);
 }
 .app-card__name{margin-bottom:var(--s2)}
+.app-card__name a{color:var(--ink)}
+.app-card__name a:hover{color:var(--coral-ink)}
+/* stretched link — whole card is clickable; real links inside stay above it */
+.app-card__name a::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.app-card__actions a{position:relative;z-index:1}
 .app-card__desc{font-size:15px;line-height:1.55;color:var(--body);margin-bottom:var(--s5);flex:1 1 auto}
 .app-card__actions{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center;justify-content:center}
 .store-badge img{height:40px;width:auto}

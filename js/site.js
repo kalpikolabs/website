@@ -147,7 +147,8 @@
     if (!g) return;
     g.innerHTML = apps.map(function (p) {
       return '<article class="card app-card">' +
-        '<img class="app-card__icon" src="' + esc(p.icon) + '" alt="" width="64" height="64">' +
+        '<img class="app-card__icon" src="' + esc(p.icon) + '" alt="" width="64" height="64" ' +
+        'onerror="this.onerror=null;this.src=\'/assets/app-placeholder-icon.svg\'">' +
         '<h4 class="app-card__name"><a href="/apps/' + esc(p.slug) + '/">' + esc(p.name) + '</a></h4>' +
         '<p class="app-card__desc">' + esc(p.description) + '</p>' +
         '<div class="app-card__actions">' + actionsInner(p) + '</div>' +
