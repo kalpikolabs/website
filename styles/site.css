@@ -246,7 +246,6 @@ body:not(.has-hero) .site-header{
   padding:var(--s6);text-align:center;
 }
 .preview--1{background:var(--violet);transform:rotate(-3deg);animation:float1 4s ease-in-out infinite}
-.preview--2{background:var(--surface);transform:rotate(0);animation:float2 3.4s ease-in-out infinite}
 .preview--3{background:var(--coral);transform:rotate(3deg);animation:float3 3.7s ease-in-out infinite}
 .preview__mark{width:96px;height:96px;margin:0 auto}
 .preview__name{font-weight:600;color:var(--ink);margin:0 0 var(--s3)}
@@ -264,14 +263,13 @@ body:not(.has-hero) .site-header{
 
 @media (max-width:768px){
   .hero{padding:120px 0 72px}
-  .preview--1,.preview--3{display:none}
+  .preview--3{display:none}
   .hero__label{display:none}
 }
 
 @keyframes fade-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes fade-in{from{opacity:0}to{opacity:1}}
 @keyframes float1{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(-3deg) translateY(-6px)}}
-@keyframes float2{0%,100%{transform:rotate(0) translateY(0)}50%{transform:rotate(0) translateY(-6px)}}
 @keyframes float3{0%,100%{transform:rotate(3deg) translateY(0)}50%{transform:rotate(3deg) translateY(-6px)}}
 
 /* Compact hero variant (about) — keeps the bottom-30% fade, no previews */
