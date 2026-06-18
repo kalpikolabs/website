@@ -490,29 +490,77 @@ textarea.cform__input{resize:vertical;min-height:120px}
 .app-cta{text-align:center}
 .app-cta h2{margin-bottom:var(--s5)}
 
-/* --- Footer (centered, inside the frame) ------------------------------- */
+/* --- Footer (fixed height, inside the frame) --------------------------- *
+ * Four columns + a bottom row. The Apps column shows only the 3 newest
+ * apps (rendered by site.js), so the footer never grows with the catalogue.
+ * [data-footer-apps] reserves 3 rows so height is identical at 2 or 20 apps. */
 .site-footer{background:var(--footer);color:var(--body-dark);padding:var(--s8) 0}
 .site-footer a{color:var(--body-dark)}
 .site-footer a:hover{color:var(--coral)}
-.footer__inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:var(--s6)}
-.footer__brand-img{width:180px;height:40px}
-.footer__cols{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s8)}
+.footer__inner{display:flex;flex-direction:column;gap:var(--s7)}
+.footer__cols{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:var(--s6) var(--s8);align-items:start}
 .footer__col-title{
-  font-family:var(--font-body);font-size:14px;font-weight:600;
+  font-family:var(--font-body);font-size:13px;font-weight:600;
   text-transform:uppercase;letter-spacing:.08em;color:var(--ink-dark);margin:0 0 var(--s4);
 }
 .footer__col li{margin-bottom:var(--s3)}
 .footer__col a{font-size:15px}
+.footer__col--brand{max-width:300px}
+.footer__brand-img{width:160px;height:36px;margin-bottom:var(--s4)}
+.footer__blurb{font-size:14px;line-height:1.55;color:var(--muted-dark);margin:0}
+[data-footer-apps]{min-height:7em}
+.footer__more{display:inline-block;margin-top:var(--s2);font-size:15px;font-weight:600}
+.footer__more--amber{color:var(--amber)}
+.footer__more--amber:hover{color:var(--coral)}
+.footer__note{margin:var(--s3) 0 0;font-size:13px;line-height:1.5;color:var(--muted-dark);max-width:22ch}
 .footer__bottom{
-  display:flex;flex-direction:column;align-items:center;gap:var(--s4);
-  width:100%;margin-top:var(--s4);padding-top:var(--s5);border-top:1px solid #4C42A0;
+  display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:var(--s4);
+  width:100%;padding-top:var(--s5);border-top:1px solid #4C42A0;
 }
 .footer__copy{font-size:14px;color:var(--muted-dark)}
 .footer__social{display:flex;align-items:center;gap:var(--s5)}
 .footer__social a{display:inline-flex;color:var(--muted-dark);transition:color .15s ease-out}
 .footer__social a:hover{color:var(--coral)}
 .footer__social svg{width:20px;height:20px}
-@media (max-width:768px){.footer__cols{gap:var(--s6)}}
+@media (max-width:768px){
+  .footer__cols{grid-template-columns:1fr 1fr;gap:var(--s6)}
+  .footer__col--brand{grid-column:1 / -1;max-width:none}
+  .footer__bottom{flex-direction:column;gap:var(--s4);text-align:center}
+}
+@media (max-width:430px){.footer__cols{grid-template-columns:1fr}}
+
+/* --- Apps directory (/apps/) — grows sideways then wraps --------------- */
+.apps-directory{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:var(--s5);margin-top:var(--s7);text-align:left;
+}
+.dir-card{align-items:flex-start;text-align:left}
+.dir-card__icon{
+  width:56px;height:56px;border-radius:14px;object-fit:cover;
+  margin-bottom:var(--s4);border:1px solid var(--border);
+}
+.dir-card__name{margin-bottom:var(--s2)}
+.dir-card__name a{color:var(--ink)}
+.dir-card__name a:hover{color:var(--coral-ink)}
+.dir-card__desc{font-size:14px;line-height:1.55;color:var(--body);margin:0 0 var(--s4);flex:1 1 auto}
+.dir-card__status{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center;margin-bottom:var(--s4)}
+.dir-card__status .store-badge img,.dir-card__status .store-badges img{height:36px}
+.dir-card__legal{margin:0;font-size:13px;color:var(--muted)}
+.dir-card__legal a{font-weight:600}
+
+/* --- Legal index (/legal/) — every app's policies --------------------- */
+.legal-index{max-width:640px;margin:var(--s7) auto 0;text-align:left}
+.legal-index__row{
+  display:flex;align-items:center;justify-content:space-between;gap:var(--s4);
+  padding:var(--s4) 0;border-bottom:1px solid var(--border);
+}
+.legal-index__row:first-child{border-top:1px solid var(--border)}
+.legal-index__name{font-weight:600;color:var(--ink)}
+.legal-index__links{display:flex;gap:var(--s5)}
+.legal-index__links a{font-weight:600;font-size:15px}
+@media (max-width:480px){
+  .legal-index__row{flex-direction:column;align-items:flex-start;gap:var(--s2)}
+}
 
 /* --- App links hub (in-app settings target) ---------------------------- */
 .linkhub-page .frame{padding-top:0}

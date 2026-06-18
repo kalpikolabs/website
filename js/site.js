@@ -81,8 +81,8 @@
     });
   }
 
-  var hooks = '[data-apps-grid],[data-footer-apps],[data-footer-legal],' +
-              '[data-support-applinks],[data-app-detail]';
+  var hooks = '[data-apps-grid],[data-footer-apps],[data-apps-directory],' +
+              '[data-legal-list],[data-support-applinks],[data-app-detail]';
   if (document.querySelector(hooks)) {
     fetch('/data/apps.json')
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
@@ -90,6 +90,8 @@
         var apps = (data && data.apps) || [];
         renderFooter(apps);
         renderGrid(apps);
+        renderDirectory(apps);
+        renderLegalList(apps);
         renderSupport(apps);
         renderDetail(apps);
         renderAppSelect(apps);
@@ -131,21 +133,49 @@
     return '<span class="pill pill--soon">Coming soon</span>' + eta + notify;
   }
 
+  // Footer Apps column shows ONLY the 3 most-recently-added apps (last 3
+  // entries in apps.json), newest first — so the footer stays a fixed height
+  // no matter how many apps exist. The full list lives on /apps/.
   function renderFooter(apps) {
     var a = document.querySelector('[data-footer-apps]');
-    if (a) {
-      a.innerHTML = apps.map(function (p) {
-        return '<li><a href="/apps/' + esc(p.slug) + '/">' + esc(p.name) + '</a></li>';
-      }).join('');
-    }
-    var l = document.querySelector('[data-footer-legal]');
-    if (l) {
-      l.innerHTML = apps.map(function (p) {
-        var base = '/apps/' + esc(p.slug) + '/';
-        return '<li><a href="' + base + 'privacy/">' + esc(p.name) + ' — Privacy</a></li>' +
-               '<li><a href="' + base + 'terms/">' + esc(p.name) + ' — Terms</a></li>';
-      }).join('');
-    }
+    if (!a) return;
+    var recent = apps.slice(-3).reverse();
+    a.innerHTML = recent.map(function (p) {
+      return '<li><a href="/apps/' + esc(p.slug) + '/">' + esc(p.name) + '</a></li>';
+    }).join('');
+  }
+
+  // Apps directory (/apps/) — every app, in a wrapping card grid.
+  function renderDirectory(apps) {
+    var g = document.querySelector('[data-apps-directory]');
+    if (!g) return;
+    g.innerHTML = apps.map(function (p) {
+      var base = '/apps/' + esc(p.slug) + '/';
+      return '<article class="card dir-card">' +
+        '<img class="dir-card__icon" src="' + esc(p.icon) + '" alt="" width="56" height="56" ' +
+        'onerror="this.onerror=null;this.src=\'/assets/app-placeholder-icon.svg\'">' +
+        '<h3 class="dir-card__name"><a href="' + base + '">' + esc(p.name) + '</a></h3>' +
+        '<p class="dir-card__desc">' + esc(p.description) + '</p>' +
+        '<div class="dir-card__status">' + actionsInner(p) + '</div>' +
+        '<p class="dir-card__legal"><a href="' + base + 'privacy/">Privacy</a>' +
+        ' · <a href="' + base + 'terms/">Terms</a></p>' +
+        '</article>';
+    }).join('');
+  }
+
+  // Legal index (/legal/) — every app's Privacy + Terms links.
+  function renderLegalList(apps) {
+    var l = document.querySelector('[data-legal-list]');
+    if (!l) return;
+    l.innerHTML = apps.map(function (p) {
+      var base = '/apps/' + esc(p.slug) + '/';
+      return '<div class="legal-index__row">' +
+        '<span class="legal-index__name">' + esc(p.name) + '</span>' +
+        '<span class="legal-index__links">' +
+        '<a href="' + base + 'privacy/">Privacy</a>' +
+        '<a href="' + base + 'terms/">Terms</a>' +
+        '</span></div>';
+    }).join('');
   }
 
   function renderGrid(apps) {

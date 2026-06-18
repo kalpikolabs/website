@@ -50,7 +50,7 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="/#apps">Apps</a>
+        <a class="nav__link" href="/apps/">Apps</a>
         <a class="nav__link" href="/support/">Support</a>
         <a class="nav__link" href="/about/">About</a>
       </nav>
@@ -79,7 +79,7 @@
         <line x1="18" y1="6" x2="6" y2="18"/>
       </svg>
     </button>
-    <a class="nav-overlay__link" href="/#apps">Apps</a>
+    <a class="nav-overlay__link" href="/apps/">Apps</a>
     <a class="nav-overlay__link" href="/support/">Support</a>
     <a class="nav-overlay__link" href="/about/">About</a>
     <a class="nav-overlay__link" href="/support/#contact">Say hello</a>
@@ -191,23 +191,27 @@
     </div>
   </main>
 
-  <!-- ===== Shared footer (static — legal pages are not JS-rendered) ===== -->
+  <!-- ===== Shared footer (fixed height — Apps column driven by /data/apps.json) ===== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer__inner">
-        <img class="footer__brand-img" src="/assets/lockup-transparent-dark.svg"
-             alt="Kalpiko Labs" width="180" height="40">
-
         <div class="footer__cols">
+
+          <div class="footer__col footer__col--brand">
+            <img class="footer__brand-img" src="/assets/lockup-transparent-dark.svg"
+                 alt="Kalpiko Labs" width="160" height="36">
+            <p class="footer__blurb">Small, sharp, genuinely useful apps for iOS&nbsp;and&nbsp;Android.</p>
+          </div>
+
           <nav class="footer__col" aria-label="Apps">
             <h2 class="footer__col-title">Apps</h2>
-            <ul>
-              <li><a href="/apps/sprout/">Sprout</a></li>
-              <li><a href="/apps/approved/">Approved</a></li>
-              <li><a href="/apps/unpile/">Unpile</a></li>
-              <li><a href="/apps/receipt-keeper/">Receipt Keeper</a></li>
+            <!-- 3 most-recently-added apps; /js/site.js overwrites from apps.json -->
+            <ul data-footer-apps>
               <li><a href="/apps/paperly/">Paperly</a></li>
+              <li><a href="/apps/receipt-keeper/">Receipt Keeper</a></li>
+              <li><a href="/apps/unpile/">Unpile</a></li>
             </ul>
+            <a class="footer__more footer__more--amber" href="/apps/">All apps →</a>
           </nav>
 
           <nav class="footer__col" aria-label="Company">
@@ -215,35 +219,21 @@
             <ul>
               <li><a href="/about/">About</a></li>
               <li><a href="/support/">Support</a></li>
-              <li><a href="mailto:support@kalpikolabs.com">Email</a></li>
+              <li><a href="mailto:support@kalpikolabs.com">support@kalpikolabs.com</a></li>
             </ul>
           </nav>
 
           <nav class="footer__col" aria-label="Legal">
             <h2 class="footer__col-title">Legal</h2>
-            <ul>
-              <li><a href="/apps/sprout/privacy/">Sprout — Privacy</a></li>
-              <li><a href="/apps/sprout/terms/">Sprout — Terms</a></li>
-              <li><a href="/apps/approved/privacy/">Approved — Privacy</a></li>
-              <li><a href="/apps/approved/terms/">Approved — Terms</a></li>
-              <li><a href="/apps/unpile/privacy/">Unpile — Privacy</a></li>
-              <li><a href="/apps/unpile/terms/">Unpile — Terms</a></li>
-              <li><a href="/apps/receipt-keeper/privacy/">Receipt Keeper — Privacy</a></li>
-              <li><a href="/apps/receipt-keeper/terms/">Receipt Keeper — Terms</a></li>
-              <li><a href="/apps/paperly/privacy/">Paperly — Privacy</a></li>
-              <li><a href="/apps/paperly/terms/">Paperly — Terms</a></li>
-            </ul>
+            <a class="footer__more" href="/legal/">Privacy &amp; Terms →</a>
+            <p class="footer__note">Per-app policies live on each app’s page.</p>
           </nav>
+
         </div>
 
         <div class="footer__bottom">
           <p class="footer__copy">© 2026 Kalpiko Labs</p>
           <div class="footer__social">
-            <a href="#" aria-label="GitHub" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/>
-              </svg>
-            </a>
             <a href="#" aria-label="X" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M18.9 2H22l-7.5 8.6L23 22h-6.9l-5.4-7-6.2 7H1.4l8-9.2L1 2h7l4.9 6.5L18.9 2Zm-2.4 18h1.9L7.6 4H5.6l10.9 16Z"/>
