@@ -88,6 +88,20 @@
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (data) {
         var apps = (data && data.apps) || [];
+
+        // Apps hidden for launch ("hidden": true in apps.json). Send the
+        // /apps/ directory and each app detail page home, and render every
+        // app list empty so nothing references an app while hidden. The
+        // homepage Apps section, footer Apps column and 'Apps' nav links are
+        // hidden by the matching block in styles/site.css.
+        if (data && data.hidden) {
+          if (document.querySelector('[data-app-detail],[data-apps-directory]')) {
+            window.location.replace('/');
+            return;
+          }
+          apps = [];
+        }
+
         renderFooter(apps);
         renderGrid(apps);
         renderDirectory(apps);
@@ -167,6 +181,12 @@
   function renderLegalList(apps) {
     var l = document.querySelector('[data-legal-list]');
     if (!l) return;
+    if (!apps.length) {
+      l.innerHTML = '<p class="legal-links__empty">No apps have shipped yet. ' +
+        'Each app\'s privacy policy and terms will be listed here as it launches ' +
+        '— and are always linked inside the app itself.</p>';
+      return;
+    }
     l.innerHTML = apps.map(function (p) {
       var base = '/apps/' + esc(p.slug) + '/';
       return '<div class="legal-index__row">' +

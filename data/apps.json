@@ -8,6 +8,16 @@
     "5. git push.  (The 'save' action on GitHub Pages is a git commit.)",
     "NOTE: privacy + terms pages are ALWAYS static HTML — never rendered from this file."
   ],
+  "_hidden_howto": [
+    "TEMPORARY — apps are hidden for launch. Nothing below is deleted.",
+    "While \"hidden\" is true, /js/site.js renders every app list empty and",
+    "redirects the /apps/ directory + each app detail page to the homepage,",
+    "and styles/site.css hides the homepage Apps section, footer Apps column,",
+    "and the 'Apps' nav links.",
+    "TO SHOW APPS AGAIN: (1) set \"hidden\" to false below, and",
+    "(2) delete the 'Apps hidden for launch' block at the end of styles/site.css."
+  ],
+  "hidden": true,
   "apps": [
     {
       "slug": "sprout",

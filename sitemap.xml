@@ -6,12 +6,15 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <!-- Apps hidden for launch — directory entry removed from sitemap until apps relaunch -->
+  <!--
   <url>
     <loc>https://kalpikolabs.com/apps/</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  -->
   <url>
     <loc>https://kalpikolabs.com/legal/</loc>
     <lastmod>2026-06-18</lastmod>
@@ -30,6 +33,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- Apps hidden for launch — per-app pages removed from sitemap until apps relaunch.
+       To restore: delete the surrounding XML comment markers. -->
+  <!--
   <url>
     <loc>https://kalpikolabs.com/apps/sprout/</loc>
     <lastmod>2026-06-13</lastmod>
@@ -150,4 +156,5 @@
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
+  -->
 </urlset>

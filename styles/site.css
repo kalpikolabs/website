@@ -614,3 +614,22 @@ textarea.cform__input{resize:vertical;min-height:120px}
     animation-duration:.001ms !important;animation-iteration-count:1 !important;
     transition-duration:.001ms !important;scroll-behavior:auto !important}
 }
+
+/* ───────────────────────────────────────────────────────────────────────────
+   Apps hidden for launch  (TEMPORARY — nothing is deleted)
+   Pairs with "hidden": true in /data/apps.json. Loaded in <head>, so these
+   hide before first paint (no flash) and work even with JS disabled.
+   TO SHOW APPS AGAIN: set "hidden" to false in apps.json AND delete this block.
+   ─────────────────────────────────────────────────────────────────────────── */
+/* Homepage "Built at the lab" section + the hero "See our apps" button */
+#apps,
+.hero .btn--pill[href="#apps"]{display:none !important}
+/* Footer "Apps" column (every page) */
+.footer__col[aria-label="Apps"]{display:none !important}
+/* "Apps" link in the header nav + mobile overlay (every page) */
+.nav__link[href="/apps/"],
+.nav-overlay__link[href="/apps/"]{display:none !important}
+/* /apps/ directory grid + each app detail page — blanked to avoid a flash
+   before /js/site.js redirects them to the homepage */
+.apps-directory,
+[data-app-detail]{display:none !important}
